@@ -79,7 +79,7 @@ public class HabitDAO {
                         resultSet.getString("tag")
                 };
             } else {
-                return null; // Habit not found
+                return null; 
             }
         } catch (SQLException e) {
             throw new RuntimeException("Failed to retrieve habit details.", e);
