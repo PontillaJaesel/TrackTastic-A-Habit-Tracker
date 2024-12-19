@@ -11,10 +11,8 @@ public class DBConnection {
 
     private static Connection connection;
 
-    // Private constructor to prevent instantiation
     private DBConnection() {}
 
-    // Method to get the database connection
     public static Connection getConnection() throws SQLException {
         if (connection == null || connection.isClosed()) {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -22,7 +20,6 @@ public class DBConnection {
         return connection;
     }
 
-    // Method to close the connection
     public static void closeConnection() {
         try {
             if (connection != null && !connection.isClosed()) {
