@@ -9,7 +9,7 @@ public class Daily extends Habit {
     private HabitDAO habitDAO;
 
     public Daily() {
-        this.habitDAO = new HabitDAO(); // Initialize the DAO
+        this.habitDAO = new HabitDAO();
     }
 
     public void createHabit(String tag) {
@@ -56,7 +56,7 @@ public class Daily extends Habit {
 
         int n = 1;
         for (String habitName : habitNames) {
-            String[] habitDetails = habitDAO.getHabitDetails(habitName); // You'll need to implement this method in DAO
+            String[] habitDetails = habitDAO.getHabitDetails(habitName); 
 
             String description = habitDetails[0];
             String status = habitDetails[1];
@@ -88,7 +88,7 @@ public class Daily extends Habit {
 
             String habitToEdit = scanner.nextLine();
 
-            if (habitDAO.habitExists(habitToEdit)) { // You'll need to implement this method in DAO
+            if (habitDAO.habitExists(habitToEdit)) { 
                 String[] status = habitDAO.getHabitDetails(habitToEdit);
 
                 int statusNum = Integer.parseInt(status[1]);
@@ -154,7 +154,6 @@ public class Daily extends Habit {
                     statusMessage = "in progress";
                     break;
             }
-
             System.out.println("Name: " + habitName + " - Status: " + statusMessage);
         }
 
