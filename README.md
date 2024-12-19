@@ -90,10 +90,14 @@ After cloning, the project directory will have the following structure:
 TrackTastic/
 ├── OOP/
     ├── src/
+        ├── config/
+            ├── DBConnection.java
+        ├── dao/
+            ├── HabitDAO.java
+            ├── UserDAO.java
         ├── main/
             └── TrackTastic.java
         ├── utils/
-            ├── Databases.java
             ├── Design.java
         ├── habit/
             ├── Daily.java
@@ -105,6 +109,8 @@ TrackTastic/
             ├── User.java
             ├── UserHP.java
             ├── UserProfile.java
+        
+            
 ```
 
 - **Source Files:** All Java files are located in the `OOP/src` directory.
