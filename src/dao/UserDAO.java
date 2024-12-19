@@ -16,7 +16,6 @@ public class UserDAO {
         }
     }
 
-    // add user to db
     public void addUser(User user) {
         String sql = "INSERT INTO users (username, password, bio) VALUES (?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
