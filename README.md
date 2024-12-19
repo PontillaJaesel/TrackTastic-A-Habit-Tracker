@@ -31,6 +31,30 @@ TrackTastic leverages the four fundamental principles of OOP: **encapsulation**,
 - The `Habit` class embodies abstraction by providing a framework of abstract methods that all subclasses must implement. For example, the abstract method `trackProgress()` ensures that both `Daily` and `Weekly` habits provide their own implementation of progress tracking. This guarantees a consistent interface for managing habits across the application, while allowing each habit type to tailor its functionality to specific requirements. By focusing on the essential aspects of habit management, the abstract class simplifies the overall program design and enforces a logical structure.
 
 ---
+## Database Tables Schema
+
+### Users Table
+
+```sql
+CREATE TABLE users (
+    user_id INT NOT NULL AUTO_INCREMENT,
+    username VARCHAR(50) PRIMARY KEY,       
+    password VARCHAR(255) NOT NULL,        
+    bio TEXT                               
+);
+```
+
+### Habits Table
+
+```sql
+CREATE TABLE habits (
+    habit_name VARCHAR(100) PRIMARY KEY,   
+    description TEXT,                      
+    status VARCHAR(50),                    
+    goal TEXT,                             
+    tag VARCHAR(50)                        
+);
+```
 
 ## III. Sustainable Development Goal (SDG) Integration 🌍
 
