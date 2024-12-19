@@ -101,11 +101,10 @@ public class Register {
 
             int userId = userDAO.login(username, enteredPassword);
             if (userId != -1) {
-                // Get the user bio after login
                 String[] userCredentials = userDAO.getCredentials(username);
-                User userProfile = new User(username, enteredPassword, userCredentials[1]); // Passing the bio as well
+                User userProfile = new User(username, enteredPassword, userCredentials[1]);
                 UserHP userHP = new UserHP(userProfile.getUsername(), userProfile.getPassword(), userProfile.getBio());
-                userHP.userMenu(userProfile); // Navigate to the user menu
+                userHP.userMenu(userProfile); 
                 return true;
             }
             System.out.println("Invalid username or password.");
